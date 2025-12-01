@@ -45,6 +45,12 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>1.7.1</version>
+            <scope>test</scope>
+        </dependency>
         <!-- Argon2 password hashing -->
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -92,6 +98,12 @@
             <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson if Gson is preferred -->
             <version>0.11.2</version>
             <scope>compile</scope>
+        </dependency>
+        <!-- Selenium for browser automation/testing -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.5.3</version>
         </dependency>
     </dependencies>
 

@@ -14,5 +14,5 @@ public interface ToursQuery {
         "SELECT * FROM f_gettoursbypagenumberandsize(?, 10);";
 
     String count =
-        "SELECT count(*) FROM tours;";
+        "SELECT count(*) AS count FROM tours;";
 }

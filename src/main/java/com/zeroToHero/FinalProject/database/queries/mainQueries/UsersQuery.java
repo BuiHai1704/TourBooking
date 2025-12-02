@@ -1,7 +1,7 @@
 package com.zeroToHero.FinalProject.database.queries.mainQueries;
 
 public interface UsersQuery {
-    String checkAvailableEmail =
+    String checkAvailableEmail = 
     "SELECT EXISTS (SELECT email FROM users WHERE email = ?) AS \"exists\";";
 
     String insertNewUser =
@@ -23,7 +23,7 @@ public interface UsersQuery {
         "UPDATE users SET (email, password, first_name, last_name) = (?, ?, ?, ?) WHERE user_id = ?::uuid;";
 
     String count =
-        "SELECT count(*) FROM users;";
+        "SELECT count(*) AS count FROM users;";
 
     String deleteUser =
         "DELETE FROM users WHERE users.user_id = ?::uuid AND users.email = ?;";

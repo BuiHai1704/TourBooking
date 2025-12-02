@@ -33,8 +33,15 @@ public class ToursDAO {
                 tour.setPrice(rs.getString("price"));
                 tour.setCountryName(rs.getString("country_name"));
 
-                String[] images = (String[]) rs.getArray("images").getArray();
-                tour.setImages(images[0]);
+                java.sql.Array imgSqlArray = rs.getArray("images");
+                if (imgSqlArray != null) {
+                    // Lấy dữ liệu dưới dạng mảng Object
+                    Object[] images = (Object[]) imgSqlArray.getArray();
+                    if (images.length > 0) {
+                        // Ép kiểu phần tử đầu tiên sang String
+                        tour.setImages(images[0].toString());
+                    }
+                }
 
                 popTours.add(tour);
             }

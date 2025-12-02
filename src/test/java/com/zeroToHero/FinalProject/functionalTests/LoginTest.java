@@ -1,4 +1,4 @@
-package functionalTests;
+package com.zeroToHero.FinalProject.functionalTests;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.junit.jupiter.api.AfterEach;
